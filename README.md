@@ -8,7 +8,10 @@ your organization's LDAP server.
 It's designed for Rails 3.1 and above.
 
 ldap-rails is developed and maintained by
-[Ben Weissmann](http://benweissmann.com).
+[Ben Weissmann](http://benweissmann.com). If you have bug reports or
+feature requests, please
+[file an issue](https://github.com/benweissmann/ldap-rails/issues) or email
+me at [ben@benweissmann.com](mailto:ben@benweissmann.com).
 
 ## Setup
 
@@ -16,7 +19,9 @@ ldap-rails is developed and maintained by
 2. Run "bundle install" to install the new gem.
 3. Run "rails generate ldap_auth ldap.your-org.com"
 
-That's it. You're done.
+That's it. You're done. Users will be presented with a login form when they
+visit your site, and will need to log in with LDAP before they can access your
+site.
 
 ## Configuration
 
@@ -31,6 +36,14 @@ You can customize the LDAP connection configuration after you've run the
 generator in config/initializer/ldap_auth.rb. See the instruction in that
 file for more detail.
 
+## Roadmap
+
+Planned features:
+
+* Access control based on LDAP groups.
+* Integration with ActiveRecord to easily store authenticated users in your
+  database.
+
 ## License
 
-ldap-rails is licensed under the MIT license
+ldap-rails is licensed under the MIT license. See LICENSE.txt for details.

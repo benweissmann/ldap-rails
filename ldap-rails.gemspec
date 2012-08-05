@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.summary     = "Radically simple LDAP authentication for Rails."
   s.description = "Generator that enabled LDAP authentication with a single command."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.1.0"
-  s.add_dependency "net-lap", "~> 0.3.1"
+  s.add_dependency "net-ldap", "~> 0.3.1"
 
   s.add_development_dependency "sqlite3"
 end

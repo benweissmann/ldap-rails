@@ -1,0 +1,1 @@
+LdapRails.configure :host => 'ceviche.local'

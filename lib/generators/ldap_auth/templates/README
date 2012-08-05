@@ -1,0 +1,25 @@
+
+
+You're all set up for authentication. Just double-check that the settings
+in config/initializers/ldap_auth.rb are correct.
+
+YOu can style the login page with CSS, or just use Bootstrap
+(http://twitter.github.com/bootstrap/) -- the login page is set up to
+loog great with Bootstrap.
+
+In your controllers, use "ldap_user.username" to get the username of the
+logged in user. In your views, use "@controller.ldap_user.username".
+
+To create a simple login status display with a logout link
+(e.g. "You are logged in as someuser. <a href="/logout">Log Out</a>.")
+use:
+
+<%= ldap_status %>
+
+To log out a user, submit a POST request to "/logout_ldap". You can
+create a logout link in your views with:
+
+<%= link_to 'Log Out', ldap_logout_path, :method => :post %>
+
+For more documentation, go to http://github.com/benweissmann/ldap-rails
+

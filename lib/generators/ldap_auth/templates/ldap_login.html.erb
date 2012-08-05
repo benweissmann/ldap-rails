@@ -1,0 +1,25 @@
+<% if flash[:ldap_login_error] %>
+  <div class="alert alert-error">
+    <%= flash[:ldap_login_error] %>
+  </div>
+<% end %>
+
+<%= form_tag :html => {:class => 'ldap-login-form form-horizontal'} do %>
+  <legend>Log in with your LDAP username and password</legend>
+  <div class="control-group">
+    <label class="control-label" for="username">Username</label>
+    <div class="controls">
+      <input type="text" class="input-xlarge" id="username" name="username">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="password">Password</label>
+    <div class="controls">
+      <input type="password" class="input-xlarge" id="password" name="password">
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Log In</buton>
+  </div>
+<% end %>

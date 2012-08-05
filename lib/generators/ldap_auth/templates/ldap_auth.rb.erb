@@ -1,0 +1,16 @@
+# Make sure to restart your server whenever you edit this file.
+
+# The configuration parameters here are inferred from the hostname you provided
+# to the generator, and are usually correct. You can edit them to match
+# your LDAP server's configuration.
+#
+# host: The hostname of the LDAP server
+# port: The port to connect to the LDAP server on. The default for non-SSL
+#       connections in 389 and the default of SSL connections is 636.
+# ssl:  If true, LdapRails will connect using SSL/TLS.
+# 
+# base_dn, login_key, login_prefix: Ask you LDAP server administrator
+# for these value. When authenticating, LdapRails constructs the LDAP
+# DN for the user based on their username and these values:
+# DN: <login_key>=<username>,<login_suffix>,<base_dn>
+LdapRails.configure(<%= LdapRails.config.inspect %>)
